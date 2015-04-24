@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/consultarCertificacionPedimento"
+	xmlns:tns="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/consultarCertificacionPedimento"
+	xmlns:des="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/comunesedespacho"
+	xmlns:comun="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/comunesedespacho"
+	xmlns:ped="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/datosCertificacionPedimento"
+	elementFormDefault="qualified">
+
+	<xsd:import schemaLocation="ComunesEDespacho.xsd"
+		namespace="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/comunesedespacho" />
+	<xsd:import schemaLocation="DatosCertificacionPedimento.xsd"
+		namespace="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/datosCertificacionPedimento" />
+
+
+	<xsd:complexType name="CertificacionPedimentoPeticion">
+		<xsd:annotation>
+			<xsd:documentation>Ceertificación de Pedimento Petición
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="eDespacho">
+				<xsd:annotation>
+					<xsd:documentation>Número de Documento Electrónico
+						ppppyyyymm#######.
+						Dato Obligatorio</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="17" />
+						<xsd:whiteSpace value="collapse" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="CertificacionPedimentoRespuesta">
+		<xsd:annotation>
+			<xsd:documentation></xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="comun:RespuestaPrivadosBase">
+				<xsd:sequence>
+				<xsd:element name="fechaTransaccion">
+					<xsd:annotation>
+						<xsd:documentation> Fecha en la que se realizó la selección
+							automatizada en el formato:
+							aaaa-mm-dd hh:mm (24 horas)
+							Solamente estará presente  cuando
+							se solicita Selección Automatizada 
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:date">
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="numeroOperacion">
+					<xsd:annotation>
+						<xsd:documentation> Número de Operacion asignado por
+							el SAAI
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:maxLength value="9"/>
+							<xsd:whiteSpace value="collapse"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="aduanaEntradaSalida">
+					<xsd:annotation>
+						<xsd:documentation> Código de la aduana en México.
+							Anexo 22 de AGA.
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:int">
+							<xsd:minInclusive value="1" />
+							<xsd:maxInclusive value="999" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="patente">
+					<xsd:annotation>
+						<xsd:documentation> Número de patente
+					</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:int">
+							<xsd:minInclusive value="1" />
+							<xsd:maxInclusive value="9999" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="datosCertificacionPedimento" type="ped:DatosCertificacionPedimento"
+					minOccurs="1" maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:element name="certificacionPedimentoPeticion" type="tns:CertificacionPedimentoPeticion" />
+	<xsd:element name="certificacionPedimentoRespuesta" type="tns:CertificacionPedimentoRespuesta" />
+</xsd:schema>

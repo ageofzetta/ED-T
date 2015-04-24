@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.ventanillaunica.gob.mx/privados/ferros/service/consultaredespacho"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:oxml="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/consultaredespacho"
+	name="ConsultarEDespachoService" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+	xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+	targetNamespace="http://www.ventanillaunica.gob.mx/privados/ferros/service/consultaredespacho">
+	<wsp:Policy wsu:Id="BasicHttpBinding_IReceptorService_policy">
+		<wsp:ExactlyOne>
+			<wsp:All>
+				<sp:TransportBinding
+					xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:TransportToken>
+							<wsp:Policy>
+								<sp:HttpsToken RequireClientCertificate="false" />
+							</wsp:Policy>
+						</sp:TransportToken>
+						<sp:AlgorithmSuite>
+							<wsp:Policy>
+								<sp:Basic256 />
+							</wsp:Policy>
+						</sp:AlgorithmSuite>
+						<sp:Layout>
+							<wsp:Policy>
+								<sp:Lax />
+							</wsp:Policy>
+						</sp:Layout>
+						<sp:IncludeTimestamp />
+					</wsp:Policy>
+				</sp:TransportBinding>
+				<sp:SignedSupportingTokens
+					xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:UsernameToken
+							sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+							<wsp:Policy>
+								<sp:WssUsernameToken10 />
+							</wsp:Policy>
+						</sp:UsernameToken>
+					</wsp:Policy>
+				</sp:SignedSupportingTokens>
+				<sp:Wss10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<wsp:Policy>
+						<sp:MustSupportRefKeyIdentifier />
+						<sp:MustSupportRefIssuerSerial />
+					</wsp:Policy>
+				</sp:Wss10>
+			</wsp:All>
+		</wsp:ExactlyOne>
+	</wsp:Policy>
+	<wsdl:types>
+		<xsd:schema
+			targetNamespace="http://www.ventanillaunica.gob.mx/privados/ferros/service/consultaredespacho/imports">
+			<xsd:import
+				namespace="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/consultaredespacho"
+				schemaLocation="./ConsultarEDespachoService.xsd" />
+		</xsd:schema>
+	</wsdl:types>
+
+
+	<wsdl:message name="ConsultarEDespachoPeticion">
+		<wsdl:part element="oxml:consultarEDespachoPeticion" name="peticion" />
+	</wsdl:message>
+	<wsdl:message name="ConsultarEDespachoRespuesta">
+		<wsdl:part element="oxml:consultarEDespachoRespuesta" name="respuesta" />
+	</wsdl:message>
+
+	<wsdl:portType name="ConsultarEDespachoServicePortType">
+		<wsdl:operation name="consultarEDespacho">
+			<wsdl:input message="tns:ConsultarEDespachoPeticion" />
+			<wsdl:output message="tns:ConsultarEDespachoRespuesta" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="ConsultarEDespachoServiceWSEndPoint"
+		type="tns:ConsultarEDespachoServicePortType">
+		<wsp:PolicyReference xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+			URI="#BasicHttpBinding_IReceptorService_policy" />
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="consultarEDespacho">
+			<soap:operation
+				soapAction="http://www.ventanillaunica.gob.mx/ventanilla/ConsultarEDespachoService/consultarEDespacho" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="ConsultarEDespachoService">
+		<wsdl:port binding="tns:ConsultarEDespachoServiceWSEndPoint"
+			name="ConsultarEDespachoServiceWSEndPoint">
+			<soap:address
+				location="http://www.ventanillaunica.gob.mx/ventanilla/ConsultarEDespachoService" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="qualified"
+	elementFormDefault="qualified"
+	targetNamespace="http://www.ventanillaunica.gob.mx/common/ws/oxml/direccion"
+	xmlns:tns="http://www.ventanillaunica.gob.mx/common/ws/oxml/direccion"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:complexType name="Domicilio">
+		<xsd:annotation>
+			<xsd:documentation>Datos del domicilio
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="calle" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Nombre de la calle del domicilio.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="100" />
+						<xsd:whiteSpace value="collapse" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="numeroExterior" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation> Número exterior del domicilio.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="55" />
+						<xsd:whiteSpace value="collapse" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="numeroInterior" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Número interior del domicilio.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="55" />
+						<xsd:whiteSpace value="collapse" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="colonia" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Nombre de la colonia del domicilio.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="120" />
+						<xsd:whiteSpace value="collapse" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="localidad" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Localidad a la que pertenece el domicilio.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="120" />
+						<xsd:whiteSpace value="collapse" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="referencia" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Referencia del domicilio.</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="250" />
+						<xsd:whiteSpace value="collapse" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="municipio" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Nombre del municipio del domicilio.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="120" />
+						<xsd:whiteSpace value="collapse" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="entidadFederativa" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Nombre del estado o entidad federativa al que
+						pertence el domicilio</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="30" />
+						<xsd:whiteSpace value="collapse" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="pais" minOccurs="0" default="MEX">
+				<xsd:annotation>
+					<xsd:documentation>Nombre del pais al que pertenece el domicilio.
+					</xsd:documentation>
+				</xsd:annotation>
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="120" />
+						<xsd:whiteSpace value="collapse" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="codigPostal" minOccurs="0">
+						<xsd:annotation>
+							<xsd:documentation>Número del código Postal del domicilio.
+							</xsd:documentation>
+						</xsd:annotation>
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="12" />
+								<xsd:whiteSpace value="collapse" />
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	
+
+</xsd:schema>

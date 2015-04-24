@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+			targetNamespace="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/datosCertificacionPedimento" 
+			xmlns:tns="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/datosCertificacionPedimento" 
+			elementFormDefault="qualified">
+			
+			
+	<xsd:complexType name="DatosCertificacionPedimento">
+		<xsd:annotation>
+			<xsd:documentation> Detalle del Pedimento
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="pedimento">
+					<xsd:annotation>
+						<xsd:documentation>Nuúmero de Pedimento. Dato Obligatorio</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="7"/>
+								<xsd:whiteSpace value="collapse"/>
+							</xsd:restriction>
+					</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="numeroRemesa">
+					<xsd:annotation>
+						<xsd:documentation> Número de Remesa</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="4"/>
+								<xsd:whiteSpace value="collapse"/>
+							</xsd:restriction>
+					</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="numeroPartesII">
+					<xsd:annotation>
+						<xsd:documentation>Número de PartesII</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="3"/>
+								<xsd:whiteSpace value="collapse"/>
+							</xsd:restriction>
+					</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="leyenda">
+					<xsd:annotation>
+						<xsd:documentation> Se insertará la leyenda correspondiente:
+							a.	Desaduanamiento Libre
+							b.	Reconocimiento Aduanero
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="40"/>
+								<xsd:whiteSpace value="collapse"/>
+							</xsd:restriction>
+					</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="firmaSeleccion">
+					<xsd:annotation>
+						<xsd:documentation>Firma de la Seleccion
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="10"/>
+								<xsd:whiteSpace value="collapse"/>	
+							</xsd:restriction>
+					</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="nombreCompletoVerificador">
+					<xsd:annotation>
+						<xsd:documentation>Nombre completo del verificador
+							asignado por el SAAI. Solamente 
+							cuando le corresponde reconocimiento aduanero
+						</xsd:documentation>	
+					</xsd:annotation>
+					<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="255"/>
+								<xsd:whiteSpace value="collapse"/>
+							</xsd:restriction>
+					</xsd:simpleType>					
+			</xsd:element>
+			<xsd:element name="numeroVerificador">
+					<xsd:annotation>
+						<xsd:documentation>Número del verificador 
+								asignado por SAAI. 
+						</xsd:documentation>	
+					</xsd:annotation>
+					<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="4"/>
+								<xsd:whiteSpace value="collapse"/>
+							</xsd:restriction>
+					</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="cumplido">
+					<xsd:annotation>
+						<xsd:documentation>Se mostrará la palabra "cumplido"
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:maxLength value="8"/>
+								<xsd:whiteSpace value="collapse"/>
+							</xsd:restriction>
+					</xsd:simpleType>					
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
