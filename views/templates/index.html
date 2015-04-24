@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Manifiesto Ferroviario</title>
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+</head>
+<body>
+	
+
+<script>
+	$( document ).ready(function() {
+    $.post( "includes/process.php", { num_refe: 'LAR08-02734-I01' }, function( data ) {
+    	if (! /^[\[|\{](\s|.*|\w)*[\]|\}]$/.test(data)) {
+    		console.log('Error de Conexión');
+    	}else{
+    		
+    	}
+    	var obj = JSON.parse(data);
+    	if (obj.ok) {
+    		console.log(obj.data.adu_desp);
+    	};
+        
+  console.log(obj);
+});
+});
+</script>

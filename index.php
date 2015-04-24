@@ -1,10 +1,11 @@
 <?php
-// Respuesta
-// WebService Falso
-$response = json_decode(file_get_contents('guias.json'));
+require_once __DIR__ . '/vendor/autoload.php';
 
-if($response->listaGuiaRespuesta->tieneError === 'true'){
-	 var_dump($response->listaGuiaRespuesta->tieneError);
-} 
-$guias = $response->listaGuiaRespuesta->guia;
-var_dump($guias[0]); 
+if (!$_POST) {
+    
+    $answer = new Response();
+    $answer->renderBasic();
+}else{
+
+}
+// 
