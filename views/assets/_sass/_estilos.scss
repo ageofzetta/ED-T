@@ -1,0 +1,19 @@
+.clearafter{
+	 @include clearfix;
+}
+.wrapper{
+	@include outer-container(1200px);
+	h1.title{
+		font-size: 2em;
+	}
+}
+.article{
+	 // @include span-columns(12);
+	 .div_container{
+		 @include span-columns(5 of 12);
+
+	 }
+	 h2{
+	 	font-size: 1.5em;
+	 }
+}

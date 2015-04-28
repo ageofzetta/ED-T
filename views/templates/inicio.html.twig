@@ -1,11 +1,60 @@
-{% extends "base.html" %}
+{% extends "base.html.twig" %}
 {% block content %}
-	<form action="" method="POST">
-		<input type="date" name="fechaInicial">
-		<input type="date" name="fechaFinal">
-		<input type="text" name="cve_transportista">
-		<input type="submit">
+<div class="article">
+<h2>Buscar números de Guía</h2>
+	<form action="" method="POST" name="daterange">
+		<div class="clearafter">
+			<div class="div_container">
+				<label for="">A partir de:</label>
+				<input type="date" name="fechaInicial">
+			</div>
+			<div class="div_container">
+				<label for="">Hasta:</label>
+				<input type="date" name="fechaFinal">
+			</div>
+			<div class="div_container">
+				<label for="">Clave de Transportista</label>
+				<input type="text" name="cve_transportista" placeholder="KCSM">
+			</div>
+			<div class="div_container">
+				<label for="">Número de Equipo</label>
+				<input type="text" name="num_equipo">
+			</div>
+		</div>
+		<input type="submit" value="Buscar" class="getBLs">
 
 	</form>
+<h2>Buscar referencia</h2>
+	<form action="" method="POST" name="referencia">
+		<div class="clearafter">
+			<div class="div_container">
+				<label for="">Número de Referencia</label>
+				<input type="text" name="num_ref" value="LAR10-21786-I00" data-value="LAR08-02937-I00" data-value="LAR08-02734-I01" placeholder="LAR15-" autofocus>
+			</div>
+		</div>
+		<input type="submit" value="Buscar" class="getBLs">
+
+	</form>
+</div>
+<table>
+	<thead>
+		<tr>
+			<td>N° de Manifiesto</td>
+			<td>Fecha</td>
+			<td>Transportista</td>
+			<td>Aduana</td>
+			<td>Estado</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>12345</td>
+			<td>Fecha</td>
+			<td>Transportista</td>
+			<td>Aduana</td>
+			<td>Estado</td>
+		</tr>
+	</tbody>
+</table>
 		
 {% endblock %}

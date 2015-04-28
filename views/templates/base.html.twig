@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Manifiesto Ferroviario</title>
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<link rel="stylesheet" href="/manifiesto_ferroviario/views/assets/styles/main.css">
+	<script src="/manifiesto_ferroviario/views/assets/js/app.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<h1 class="title">E-Despacho</h1>
+		
+    {% block errors %}{% endblock %}
+    {% block content %}{% endblock %}
+    {% block footer %}
+        {% include 'foot.html' %}
+    {% endblock %}
+	</div>
