@@ -1,9 +1,8 @@
 $( document ).ready(function() {
-
+  setTimeout(function(){
+   $('.messages').fadeOut();
+  },2500);
 });
-
-
-
 
 
 $(document).on('click','.getBLzs', function (event) {
@@ -23,4 +22,21 @@ $(document).on('click','.getBLzs', function (event) {
   console.log(obj);
     });
    });
+
+// $('body').bind('keypress', function(e) {
+//   if(e.keyCode==11){
+//      setTimeout(function() {
+//     $( '.panel-header' ).trigger( "click" );
+//   }, 100);
+//   }
+// });
   
+$(document).keydown(function(e) {
+  if (e.which == 75 && e.shiftKey && !e.ctrlKey) {
+         setTimeout(function() {
+    $( '.panel-header' ).trigger( "click" );
+  }, 100);
+  };
+      // console.log('key code is: ' + e.which + ' ' + (e.ctrlKey ? 'Ctrl' : '') + ' ' +
+      //       (e.shiftKey ? 'Shift' : '') + ' ' + (e.altKey ? 'Alt' : ''));
+});

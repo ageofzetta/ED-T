@@ -10,9 +10,9 @@
  		return $new;
  	}
  	public static function prepareString($string){
- 		if(substr($string, -1) == '/') {
- 			$string = substr($string, 0, -1);
- 		}
+ 		// if(substr($string, -1) == '/') {
+ 		// 	$string = substr($string, 0, -1);
+ 		// }
  		return html_entity_decode(trim($string));
  	}
  	public static function clearCookies(){

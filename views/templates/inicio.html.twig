@@ -1,59 +1,26 @@
 {% extends "base.html.twig" %}
 {% block content %}
-<div class="article">
-<h2>Buscar números de Guía</h2>
-	<form action="" method="POST" name="daterange">
-		<div class="clearafter">
-			<div class="div_container">
-				<label for="">A partir de:</label>
-				<input type="date" name="fechaInicial">
-			</div>
-			<div class="div_container">
-				<label for="">Hasta:</label>
-				<input type="date" name="fechaFinal">
-			</div>
-			<div class="div_container">
-				<label for="">Clave de Transportista</label>
-				<input type="text" name="cve_transportista" placeholder="KCSM">
-			</div>
-			<div class="div_container">
-				<label for="">Número de Equipo</label>
-				<input type="text" name="num_equipo">
-			</div>
-		</div>
-		<input type="submit" value="Buscar" class="getBLs">
 
-	</form>
-<h2>Buscar referencia</h2>
-	<form action="" method="POST" name="referencia">
-		<div class="clearafter">
-			<div class="div_container">
-				<label for="">Número de Referencia</label>
-				<input type="text" name="num_ref" value="LAR10-21786-I00" data-value="LAR08-02937-I00" data-value="LAR08-02734-I01" placeholder="LAR15-" autofocus>
-			</div>
-		</div>
-		<input type="submit" value="Buscar" class="getBLs">
-
-	</form>
-</div>
-<table>
+ <h2>
+ 	Manifiestos Pendientes:
+ </h2>
+<table class="table hovered">
 	<thead>
 		<tr>
-			<td>N° de Manifiesto</td>
-			<td>Fecha</td>
-			<td>Transportista</td>
-			<td>Aduana</td>
-			<td>Estado</td>
+			<td>Referencia</td>
+			<td>Guía</td>
+			<td>Fecha de Creación</td>
+			<td>E-despacho</td>
+			<td> </td>
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<td>12345</td>
-			<td>Fecha</td>
-			<td>Transportista</td>
-			<td>Aduana</td>
-			<td>Estado</td>
-		</tr>
+		<tr> <td>001</td> <td>KCSM12378</td> <td>2015-04-21</td> <td>Por Confirmar</td> <td><a class="btn button success" href="#">Confirmar</a> <a class="btn button default" href="#">Editar</a></td> </tr>
+		<tr> <td>002</td> <td>KCSM12478</td> <td>2015-04-21</td> <td>Rechazado</td> <td><a class="btn button" href="#">Confirmar</a> <a class="btn button default" href="#">Editar</a></td> </tr>
+		<tr> <td>003</td> <td>KCSM12578</td> <td>2015-04-21</td> <td>Rechazado</td> <td><a class="btn button" href="#">Confirmar</a> <a class="btn button default" href="#">Editar</a></td> </tr>
+		<tr> <td>004</td> <td>KCSM12678</td> <td>2015-04-21</td> <td>Por Confirmar</td> <td><a class="btn button success" href="#">Confirmar</a> <a class="btn button default" href="#">Editar</a></td> </tr>
+		<tr> <td>005</td> <td>KCSM12778</td> <td>2015-04-21</td> <td>Por Confirmar</td> <td><a class="btn button success" href="#">Confirmar</a> <a class="btn button default" href="#">Editar</a></td> </tr>
+		<tr> <td>006</td> <td>KCSM12878</td> <td>2015-04-21</td> <td>Rechazado</td> <td><a class="btn button" href="#">Confirmar</a> <a class="btn button default" href="#">Editar</a></td> </tr>
 	</tbody>
 </table>
 		

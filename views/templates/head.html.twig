@@ -1,0 +1,57 @@
+<div class='html-header'>
+   <p class="subheader title">E-Despacho</p>
+   <div class="grid">
+      <div class="row">
+         <div class="panel" data-role="panel">
+            <div class="panel-header bg-lightBlue fg-white">
+               <strong>Busqueda por número de:</strong>
+            </div>
+            <div class="clearafter hide">
+               <label class="ib fltl m1" for="tipo">Medio de transporte</label>
+               <select class="ib fltl m1" name="tipo" id="tipo" disabled>
+                  <option value="6">FERROCARRIL</option>
+               </select>
+               <br>
+            </div>
+            <div class="panel-content">
+               <div class="span6">
+                  <h3>Referencia</h3>
+                  <form action="" method="POST" name="referencia">
+                     <div class="clearafter">
+                        <div class="div_container">
+                           <input type="text" name="num_ref" class="num_ref" placeholder="LAR10-21786-I00" data-value="LAR08-02937-I00" data-value="LAR08-02734-I01" data-placeholder="LAR15-" autofocus>
+                        </div>
+                     </div>
+                     <input type="submit" value="Buscar" class="getBLs">
+                  </form>
+               </div>
+               <div class="span6">
+                  <h3>Guía</h3>
+                  <form action="" method="POST" name="daterange">
+                     <p class="tertiary-text-secondary ibl"  data-hint="Fecha en que el Transportista presentó la manifestación, guía o BL">Fecha de presentación</p>
+                     <div class="clearafter">
+                        <div class="div_container">
+                           <label for="">Desde:</label>
+                           <input type="date" value='{{ "last Monday"|date("Y-m-d") }}' name="fechaInicial" class="fechaInicial">
+                        </div>
+                        <div class="div_container">
+                           <label for="">Hasta:</label>
+                           <input type="date" name="fechaFinal" value='{{ "now"|date("Y-m-d") }}'>
+                        </div>
+                        <div class="div_container">
+                           <label for="">Clave de Transportista</label>
+                           <input type="text" name="cve_transportista" placeholder="KCSM">
+                        </div>
+                        <div class="div_container">
+                           <label for="">Número de Equipo</label>
+                           <input type="text" name="num_equipo">
+                        </div>
+                     </div>
+                     <input type="submit" value="Buscar" class="getBLs">
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

@@ -41,8 +41,8 @@ class Referencia
 			}
 		 	return json_encode(array('ok' => true, 'data'=> $data));
 		}else{
-		 	var_dump($guia);
-		 	return json_encode(array('ok' => false, 'msg' => 'No existen registros asociados'));
+		 	// var_dump($guia);
+		 	return json_encode(array('ok' => false, 'msg' => 'No existen registros asociados asociados a: '.$this->id));
 
 		}
 		// $m = $this->db->getRow('SELECT adu_desp,pat_agen FROM saaio_pedime LIMIT 1');
