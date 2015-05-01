@@ -31,12 +31,17 @@ $(document).on('click','.getBLzs', function (event) {
 //   }
 // });
   
-$(document).keydown(function(e) {
-  if (e.which == 75 && e.shiftKey && !e.ctrlKey) {
-         setTimeout(function() {
-    $( '.panel-header' ).trigger( "click" );
-  }, 100);
-  };
-      // console.log('key code is: ' + e.which + ' ' + (e.ctrlKey ? 'Ctrl' : '') + ' ' +
-      //       (e.shiftKey ? 'Shift' : '') + ' ' + (e.altKey ? 'Alt' : ''));
+// $(document).keydown(function(e) {
+//   if (e.which == 75 && e.shiftKey && !e.ctrlKey) {
+//          setTimeout(function() {
+//     $( '.panel-header' ).trigger( "click" );
+//   }, 100);
+//   };
+//       // console.log('key code is: ' + e.which + ' ' + (e.ctrlKey ? 'Ctrl' : '') + ' ' +
+//       //       (e.shiftKey ? 'Shift' : '') + ' ' + (e.altKey ? 'Alt' : ''));
+// });
+
+
+$("input[type='text']").click(function () {
+   $(this).select();
 });

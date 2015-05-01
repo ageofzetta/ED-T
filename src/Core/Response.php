@@ -55,7 +55,7 @@
       $template = self::startTwig('inicio.html.twig');
 
       // We send the products array, the graph and the anti-CRSF input field to render it and echo the result
-      echo $template->render(array('message' => $message));
+      echo $template->render(array('message' => $message, 'focus_head' => true));
     }
 
     public function renderSearchResults($jsonObj){

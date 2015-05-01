@@ -1,14 +1,120 @@
 {% extends "base.html.twig" %}
 {% block content %}
+<div class="resultsRef">
+ 
+    {{dump(Referencia)}} -->
+   <h3>Resultados para: Referencia<strong> <a href="javascript:;" id="mainRef">{{Referencia.num_refe}}</a> </strong></h3>
+   <div class="panel dataBlok ">
+      <div class="panel-header bg-lightBlue fg-white">
+         <strong>Información Básica</strong>
+      </div>
+      <div class="panel-content">
+         <div class="grid">
+            <div class="row">
+               <div class="span2">
+                  <label for="pedimento">N° de Pedimento</label>
+                  <input type="text" name="pedimento" id="pedimento" class="disabled" value='{{Referencia.num_pedi}}' disabled>
+               </div>
+               <div class="span2">
+                  <label for="aduana">N° de Aduana</label>
+                  <input type="text" name="aduana" id="aduana" value='{{Referencia.adu_desp}}' >
+               </div>
+               <div class="span2">
+                  <label for="patente">N° de Patente</label>
+                  <input type="text" name="patente" id="patente" value='{{Referencia.pat_agen}}' >
+                  <input type="hidden" name="transporte" id="transporte" value='{{Referencia.mtr_sali}}' >
+               </div>
+               <div class="span2">
+                  <label for="guia">N° de Guía</label>
+                  <input type="text" name="guia" id="guia" value='{{Referencia.guia}}' >
+               </div>
+               <div class="span2">
+                  <label for="guia">Clave Transportista</label>
+                  <input type="text" name="guia" id="guia" value='{{Referencia.cve_transp}}' >
+               </div>
+               <div class="span2">
+                  <label for="guia">Status Guía</label>
+                  <!-- <input type="text" name="guia" id="guia" value='' > -->
+                  <button>Consultar</button>
+               </div>
+            </div>
+            <div class="row">
+               <div class="span2">
+                  <label for="no_gafete" >N° de Gafete</label>
+                  <input type="text" name="no_gafete" id="no_gafete" placeholder="Opcional">
+               </div>
+               <div class="span2">
+                  <label for="no_fast" >N° de Tarjeta Fast</label>
+                  <input type="text" name="no_fast" id="no_fast" placeholder="Opcional">
+               </div>
+               <div class="span2">
+                  <label for="no_itn" data-hint="Número de Declaración Aduanal Americana" data-hint-position="top"  >N° de ITN</label>
+                  <input type="text" name="no_itn" id="no_itn" placeholder="Opcional" value="{{Referencia.numero_shipper}}">
+               </div>
+               <div class="span2">
+                  <label for="calificador_itn" >Calificador ITN</label>
+                  <input type="text" name="calificador_itn" id="calificador_itn" placeholder="Opcional">
+               </div>
+               
+            </div>
+         </div>
+      </div>
+   </div>
 
-<h2>Resultados</h2>
-<form action="">
-	<input type="text" value="{{Referencia.adu_desp}}">
-</form>
+   
 
+<div class="panel dataBlok ">
+      <div class="panel-header bg-lightBlue fg-white">
+         <strong>E - Despacho</strong>
+      </div>
+      <div class="panel-content">
+         <div class="grid">
+            <div class="row">
+               <div class="span2">
+                  <label for="no_edespacho" data-hint="Confirmar Registro| Primero es necesario confirmar el registro del E-Despacho" data-hint-position="top" >N° de E-Despacho</label>
+                  <input type="text" name="no_edespacho" id="no_edespacho" class="disabled" value='Pendiente' disabled>
+               </div>
+               <div class="span2">
+                  <label for="referencia" data-hint="Registre E-Despacho| Primero es necesario Registrar el E-Despacho" data-hint-position="top" >N° de Confirmación</label>
+                  <input type="text" name="referencia" id="referencia" class="disabled" value='Pendiente' disabled>
+               </div>
+               
+            </div>
+            <div class="row">
+               <div class="span12">
+
+		   		<button class="large success">Guardar</button>
+		   		<button class="large disabled">Enviar</button>
+		   		<button class="large disabled">Consultar</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <div class="grid">
+   	<div class="row"><br>
+   	</div>
+   </div>
+
+</div>
 <script>
-	setTimeout(function() {
-    $( '.panel-header' ).trigger( "click" );
-  }, 100);
+   setTimeout(function() {
+      $( '.panel-header' ).trigger( "click" );
+    }, 100);
+   window.onbeforeunload = function (e) {
+  var message = "Your confirmation message goes here.",
+  e = e || window.event;
+  // For IE and Firefox
+  if (e) {
+    e.returnValue = message;
+  }
+
+  // For Safari
+  return message;
+};
+
+$("#mainRef").focus();
 </script>
 {% endblock %}
