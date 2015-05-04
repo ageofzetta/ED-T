@@ -11,7 +11,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 			$ED = new EDespacho(array('referencia' => Tools::prepareString(Tools::friendlyPost($_POST['num_ref']))));
 			$json = $ref->getBasicInfo();
 		    $answer->renderSearchResults(json_decode($json));
-		    var_dump($ED->_cadena);
+		    var_dump(json_encode($ED));
 		}else{
 
 			$answer->redirectWithMessage('w', 'Completa correctamente todos los campos','/manifiesto_ferroviario/ ');

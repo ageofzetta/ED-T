@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" S:mustUnderstand="1">
+         <wsu:Timestamp xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <wsu:Created>2012-12-12T22:16:37Z</wsu:Created>
+            <wsu:Expires>2012-12-12T22:17:37Z</wsu:Expires>
+         </wsu:Timestamp>
+      </wsse:Security>
+   </S:Header>
+   <S:Body>
+      <ns11:detalleGuiaRespuesta xmlns:ns11="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/detalleguiaferros" xmlns="http://www.ventanillaunica.gob.mx/common/ws/oxml/direccion" xmlns:ns10="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/comunesedespacho" xmlns:ns2="http://www.ventanillaunica.gob.mx/common/ws/oxml/respuesta" xmlns:ns3="http://www.ventanillaunica.gob.mx/common/ws/oxml/documento" xmlns:ns4="http://www.ventanillaunica.gob.mx/common/ws/oxml/respuestatra" xmlns:ns5="http://www.ventanillaunica.gob.mx/common/ws/oxml/dictamen" xmlns:ns6="http://www.ventanillaunica.gob.mx/common/ws/oxml/observacion" xmlns:ns7="http://www.ventanillaunica.gob.mx/common/ws/oxml/requisito" xmlns:ns8="http://www.ventanillaunica.gob.mx/common/ws/oxml/opinion" xmlns:ns9="http://www.ventanillaunica.gob.mx/common/ws/oxml/unidadmedida">
+         <ns10:tieneError>false</ns10:tieneError>
+         <ns11:manifiesto>
+            <ns11:idTren>ACVPI</ns11:idTren>
+            <ns11:numeroManifiesto>000001</ns11:numeroManifiesto>
+            <ns11:bl>
+               <ns11:numeroBL>000800000982</ns11:numeroBL>
+               <ns11:estatusBL />
+               <ns11:cantidad>
+                  <ns11:cantidad>91</ns11:cantidad>
+                  <ns11:unidadMedida>
+                     <ns9:clave>MANUN.PLT</ns9:clave>
+                     <ns9:descripcion />
+                  </ns11:unidadMedida>
+               </ns11:cantidad>
+               <ns11:peso>
+                  <ns11:peso>41000</ns11:peso>
+                  <ns11:unidadMedida>
+                     <ns9:clave>WEIUNI.L</ns9:clave>
+                     <ns9:descripcion />
+                  </ns11:unidadMedida>
+               </ns11:peso>
+               <ns11:tipoGuia>
+                  <ns11:codigo>00</ns11:codigo>
+                  <ns11:descripcion>Neither Space Charter nor Master In-bond</ns11:descripcion>
+               </ns11:tipoGuia>
+               <ns11:lugarCarga>ENCANTADA</ns11:lugarCarga>
+               <ns11:claveSCACTransportista>KCSM</ns11:claveSCACTransportista>
+               <ns11:adenda>
+                  <ns11:codigo>AMDT.A</ns11:codigo>
+                  <ns11:descripcion>Add a Bill of Lading</ns11:descripcion>
+               </ns11:adenda>
+               <ns11:terceros>
+                  <ns11:tipo>
+                     <ns11:tipo>ENTID.SH</ns11:tipo>
+                     <ns11:descripcion>Shipper</ns11:descripcion>
+                  </ns11:tipo>
+                  <ns11:nombre>PACER STACKTRAIN</ns11:nombre>
+                  <ns11:identificacion>
+                     <ns11:descripcion />
+                  </ns11:identificacion>
+                  <ns11:domicilio>
+                     <calle>6805 PERIMETER DR</calle>
+                     <localidad>DUBLIN</localidad>
+                     <entidadFederativa>OHIO</entidadFederativa>
+                     <pais>ESTADOS UNIDOS DE AMERICA</pais>
+                     <codigPostal>43016</codigPostal>
+                     <ns11:codigoPais>USA</ns11:codigoPais>
+                     <ns11:codigoEstado>OH</ns11:codigoEstado>
+                  </ns11:domicilio>
+                  <ns11:contactoAdministrativo>
+                     <ns11:descripcion />
+                  </ns11:contactoAdministrativo>
+               </ns11:terceros>
+               <ns11:terceros>
+                  <ns11:tipo>
+                     <ns11:tipo>ENTID.CD</ns11:tipo>
+                     <ns11:descripcion>Consignee (To Receive Mail and Small Parcels)</ns11:descripcion>
+                  </ns11:tipo>
+                  <ns11:nombre>PACER STACKTRAIN</ns11:nombre>
+                  <ns11:identificacion>
+                     <ns11:descripcion />
+                  </ns11:identificacion>
+                  <ns11:domicilio>
+                     <calle>6805 PERIMETER DR</calle>
+                     <localidad>DUBLIN</localidad>
+                     <entidadFederativa>OHIO</entidadFederativa>
+                     <pais>ESTADOS UNIDOS DE AMERICA</pais>
+                     <codigPostal>43016</codigPostal>
+                     <ns11:codigoPais>USA</ns11:codigoPais>
+                     <ns11:codigoEstado>OH</ns11:codigoEstado>
+                  </ns11:domicilio>
+                  <ns11:contactoAdministrativo>
+                     <ns11:descripcion />
+                  </ns11:contactoAdministrativo>
+               </ns11:terceros>
+               <ns11:terceros>
+                  <ns11:tipo>
+                     <ns11:tipo>ENTID.XR</ns11:tipo>
+                     <ns11:descripcion>Mexican Customs broker</ns11:descripcion>
+                  </ns11:tipo>
+                  <ns11:nombre>FEDEX TRADE NETWORKS</ns11:nombre>
+                  <ns11:identificacion>
+                     <ns11:codigo>IDNQL.17</ns11:codigo>
+                     <ns11:descripcion>Automated Broker Interface (ABI) Routing Code</ns11:descripcion>
+                     <ns11:numero>0010</ns11:numero>
+                  </ns11:identificacion>
+                  <ns11:domicilio>
+                     <calle>RUBEN DARIO 281 PISO 11011101 BOSQUE</calle>
+                     <localidad>MEXICO CITY</localidad>
+                     <entidadFederativa>DISTRITO FEDERAL</entidadFederativa>
+                     <pais>MEXICO (ESTADOS UNIDOS MEXICANOS)</pais>
+                     <codigPostal>11580</codigPostal>
+                     <ns11:codigoPais>MEX</ns11:codigoPais>
+                     <ns11:codigoEstado>DF</ns11:codigoEstado>
+                  </ns11:domicilio>
+                  <ns11:contactoAdministrativo>
+                     <ns11:descripcion />
+                  </ns11:contactoAdministrativo>
+               </ns11:terceros>
+               <ns11:terceros>
+                  <ns11:tipo>
+                     <ns11:tipo>ENTID.UC</ns11:tipo>
+                     <ns11:descripcion>Ultimate Consignee</ns11:descripcion>
+                  </ns11:tipo>
+                  <ns11:nombre>CHRYSLER PARTS</ns11:nombre>
+                  <ns11:identificacion>
+                     <ns11:descripcion />
+                  </ns11:identificacion>
+                  <ns11:domicilio>
+                     <calle>3685 CENTRAL AVE PLANT CODE 00</calle>
+                     <localidad>DETROIT</localidad>
+                     <entidadFederativa>MICHIGAN</entidadFederativa>
+                     <pais>ESTADOS UNIDOS DE AMERICA</pais>
+                     <codigPostal>48210</codigPostal>
+                     <ns11:codigoPais>USA</ns11:codigoPais>
+                     <ns11:codigoEstado>MI</ns11:codigoEstado>
+                  </ns11:domicilio>
+                  <ns11:contactoAdministrativo>
+                     <ns11:descripcion />
+                  </ns11:contactoAdministrativo>
+               </ns11:terceros>
+               <ns11:transporte>
+                  <ns11:equipo>
+                     <ns11:codigo>SHEQU.CN</ns11:codigo>
+                     <ns11:descripcion />
+                     <ns11:iniciales>PACU</ns11:iniciales>
+                     <ns11:numero>887928</ns11:numero>
+                  </ns11:equipo>
+                  <ns11:numeroSello1>1514558</ns11:numeroSello1>
+                  <ns11:estatus>
+                     <ns11:codigo>EMPST.L</ns11:codigo>
+                     <ns11:descripcion />
+                  </ns11:estatus>
+                  <ns11:mercancia>
+                     <ns11:cantidad>0</ns11:cantidad>
+                     <ns11:descripcion>ACCESSORIES,</ns11:descripcion>
+                     <ns11:numerosYMarcas>.</ns11:numerosYMarcas>
+                     <ns11:peso>
+                        <ns11:unidadMedida>
+                           <ns9:descripcion />
+                        </ns11:unidadMedida>
+                     </ns11:peso>
+                     <ns11:unidadMedida>
+                        <ns9:descripcion />
+                     </ns11:unidadMedida>
+                     <ns11:pais />
+                  </ns11:mercancia>
+                  <ns11:mercancia>
+                     <ns11:cantidad>0</ns11:cantidad>
+                     <ns11:descripcion>IN MIXED LOADS</ns11:descripcion>
+                     <ns11:numerosYMarcas>.</ns11:numerosYMarcas>
+                     <ns11:peso>
+                        <ns11:unidadMedida>
+                           <ns9:descripcion />
+                        </ns11:unidadMedida>
+                     </ns11:peso>
+                     <ns11:unidadMedida>
+                        <ns9:descripcion />
+                     </ns11:unidadMedida>
+                     <ns11:pais />
+                  </ns11:mercancia>
+                  <ns11:mercancia>
+                     <ns11:cantidad>91</ns11:cantidad>
+                     <ns11:descripcion>AUTOMOBILE MOTOR</ns11:descripcion>
+                     <ns11:numerosYMarcas>NO MARKS</ns11:numerosYMarcas>
+                     <ns11:peso>
+                        <ns11:unidadMedida>
+                           <ns9:descripcion />
+                        </ns11:unidadMedida>
+                     </ns11:peso>
+                     <ns11:unidadMedida>
+                        <ns9:clave>MANUN.PLT</ns9:clave>
+                        <ns9:descripcion />
+                     </ns11:unidadMedida>
+                     <ns11:pais />
+                  </ns11:mercancia>
+                  <ns11:mercancia>
+                     <ns11:cantidad>0</ns11:cantidad>
+                     <ns11:descripcion>VEHICLE PARTS AND</ns11:descripcion>
+                     <ns11:numerosYMarcas>.</ns11:numerosYMarcas>
+                     <ns11:peso>
+                        <ns11:unidadMedida>
+                           <ns9:descripcion />
+                        </ns11:unidadMedida>
+                     </ns11:peso>
+                     <ns11:unidadMedida>
+                        <ns9:descripcion />
+                     </ns11:unidadMedida>
+                     <ns11:pais />
+                  </ns11:mercancia>
+               </ns11:transporte>
+            </ns11:bl>
+         </ns11:manifiesto>
+      </ns11:detalleGuiaRespuesta>
+   </S:Body>
+</S:Envelope>

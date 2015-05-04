@@ -11,7 +11,4 @@ return array(
     'Referencia' => $baseDir . '/src/Core/Process.php',
     'Response' => $baseDir . '/src/Core/Response.php',
     'Tools' => $baseDir . '/src/Core/Tools.php',
-    'Whoops\\Module' => $vendorDir . '/filp/whoops/src/deprecated/Zend/Module.php',
-    'Whoops\\Provider\\Zend\\ExceptionStrategy' => $vendorDir . '/filp/whoops/src/deprecated/Zend/ExceptionStrategy.php',
-    'Whoops\\Provider\\Zend\\RouteNotFoundStrategy' => $vendorDir . '/filp/whoops/src/deprecated/Zend/RouteNotFoundStrategy.php',
 );
