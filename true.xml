@@ -1,0 +1,195 @@
+<!-- 
+
+Lista
+
+https://www2.ventanillaunica.gob.mx:443/ferros/ConsultarListaGuiaFerrosService
+
+ -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:lis="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/listaguia">
+   <soapenv:Header>
+        <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+             <wsse:UsernameToken>
+                  <wsse:Username>AIN051006884</wsse:Username>
+                  <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Ecl5+TA2mvglVSfiruClGdyqo4eGng9A44YyXpJdNfWuuoF87Tp8jioswqTQF7ZZ</wsse:Password>
+             </wsse:UsernameToken>
+        </wsse:Security>
+   </soapenv:Header>
+
+   <soapenv:Body>
+    <lis:listaGuiaPeticion>
+     <lis:aduana>170</lis:aduana>
+     <lis:fechaInicial>2015-03-26</lis:fechaInicial>
+     <lis:fechaFinal>2015-03-26</lis:fechaFinal>
+     <lis:claveTransportista>KCSM</lis:claveTransportista>
+     <lis:numeroEquipo/>
+     <lis:estatusBL/>
+    </lis:listaGuiaPeticion>
+   </soapenv:Body>
+  </soapenv:Envelope>
+
+<!--
+
+Detalle
+
+https://www2.ventanillaunica.gob.mx:443/ferros/ConsultarDetalleGuiaFerrosService
+
+ -->
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:det="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/detalleguiaferros">
+   <soapenv:Header>
+        <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+             <wsse:UsernameToken>
+                  <wsse:Username>AIN051006884</wsse:Username>
+                  <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Ecl5+TA2mvglVSfiruClGdyqo4eGng9A44YyXpJdNfWuuoF87Tp8jioswqTQF7ZZ</wsse:Password>
+             </wsse:UsernameToken>
+        </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <det:detalleGuiaPeticion>
+         <det:claveTransportista>KCSM</det:claveTransportista>
+         <det:numeroBL>000001631155</det:numeroBL>
+      </det:detalleGuiaPeticion>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+<!--
+
+Registro E Despacho
+
+https://www2.ventanillaunica.gob.mx:443/ferros/RegistrarEDespachoService
+
+ -->
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:reg="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/registraredespacho" xmlns:res="http://www.ventanillaunica.gob.mx/common/ws/oxml/respuesta" xmlns:com="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/comunesedespacho">
+   <soapenv:Header>
+        <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+             <wsse:UsernameToken>
+                  <wsse:Username>AIN051006884</wsse:Username>
+                  <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Ecl5+TA2mvglVSfiruClGdyqo4eGng9A44YyXpJdNfWuuoF87Tp8jioswqTQF7ZZ</wsse:Password>
+             </wsse:UsernameToken>
+        </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <reg:registrarEDespachoPeticion>
+         <res:firmaElectronica>
+            <res:certificado>cid:710256263143</res:certificado>
+            <res:cadenaOriginal>?</res:cadenaOriginal>
+            <res:firma>cid:552617382542</res:firma>
+         </res:firmaElectronica>
+         <reg:eDespacho>
+            <com:eDespacho>?</com:eDespacho>
+            <com:datosEDespacho>
+               <com:aduana>?</com:aduana>
+               <com:patente>?</com:patente>
+               <!--1 or more repetitions:-->
+               <com:informacionPedimento>
+                  <com:pedimento>?</com:pedimento>
+                  <com:numeroRemesa>?</com:numeroRemesa>
+                  <com:cove>?</com:cove>
+                  <com:numeroPartesII>?</com:numeroPartesII>
+                  <com:requiereInspeccion>?</com:requiereInspeccion>
+                  <!--Zero or more repetitions:-->
+                  <com:dependenciaInspeccion>?</com:dependenciaInspeccion>
+                  <!--Zero or more repetitions:-->
+                  <com:folioLicenciaCertificadoPermiso>?</com:folioLicenciaCertificadoPermiso>
+                  <!--Zero or more repetitions:-->
+                  <com:eDocumentLicenciaCertificadoPermiso>?</com:eDocumentLicenciaCertificadoPermiso>
+                  <com:cantidadMercancias>?</com:cantidadMercancias>
+                  <com:valorUSD>?</com:valorUSD>
+               </com:informacionPedimento>
+               <!--1 or more repetitions:-->
+               <com:numeroBL>
+                  <com:numeroBL>?</com:numeroBL>
+                  <!--Zero or more repetitions:-->
+                  <com:numeroEquipo>
+                     <com:numeroEquipo>?</com:numeroEquipo>
+                     <!--Zero or more repetitions:-->
+                     <com:sello>?</com:sello>
+                  </com:numeroEquipo>
+               </com:numeroBL>
+               <com:claveTransportista>?</com:claveTransportista>
+               <com:medioTransporte>?</com:medioTransporte>
+               <com:numeroGafete>?</com:numeroGafete>
+               <com:numeroTarjetaFAST>?</com:numeroTarjetaFAST>
+               <com:numeroDeclaracionAduanalAmericanaOITN>?</com:numeroDeclaracionAduanalAmericanaOITN>
+               <com:calificadorITN>?</com:calificadorITN>
+            </com:datosEDespacho>
+         </reg:eDespacho>
+         <reg:tipoMovimiento>?</reg:tipoMovimiento>
+      </reg:registrarEDespachoPeticion>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+<!--
+
+Consulta E Despacho
+
+https://www2.ventanillaunica.gob.mx:443/ferros/ConsultarEDespachoService
+
+ -->
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/consultaredespacho">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" soapenv:mustUnderstand="1">
+         <wsse:UsernameToken>
+            <wsse:Username>AIN051006884</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Ecl5+TA2mvglVSfiruClGdyqo4eGng9A44YyXpJdNfWuuoF87Tp8jioswqTQF7ZZ</wsse:Password>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <con:consultarEDespachoPeticion>
+      	<con:eDespacho>30502012120000500</con:eDespacho>
+      </con:consultarEDespachoPeticion>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!--
+
+Consulta Pedimento
+
+https://www2.ventanillaunica.gob.mx:443/ferros/ConsultarCertificacionPedimentoService
+
+ -->
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/consultarCertificacionPedimento">
+   <soapenv:Header>
+        <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+             <wsse:UsernameToken>
+                  <wsse:Username>AIN051006884</wsse:Username>
+                  <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Ecl5+TA2mvglVSfiruClGdyqo4eGng9A44YyXpJdNfWuuoF87Tp8jioswqTQF7ZZ</wsse:Password>
+             </wsse:UsernameToken>
+        </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <con:certificacionPedimentoPeticion>
+         <con:eDespacho>30502012120000500</con:eDespacho>
+      </con:certificacionPedimentoPeticion>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<!--
+
+Consulta Pedimento
+
+https://www2.ventanillaunica.gob.mx:443/ferros/ConsultarEstadoGuiasService
+
+ -->
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:con="http://www.ventanillaunica.gob.mx/privados/ferros/oxml/consultarestadoguias">
+   <soapenv:Header>
+        <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+             <wsse:UsernameToken>
+                  <wsse:Username>AIN051006884</wsse:Username>
+                  <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Ecl5+TA2mvglVSfiruClGdyqo4eGng9A44YyXpJdNfWuuoF87Tp8jioswqTQF7ZZ</wsse:Password>
+             </wsse:UsernameToken>
+        </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <con:consultarEstadoGuiasPeticion>
+         <con:edespacho>30502012120000500</con:edespacho>
+      </con:consultarEstadoGuiasPeticion>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -45,6 +45,34 @@
       $msg = new Messages();
       $msg->add($code,$text,$url);
     }
+
+    public static function renderJSON($x){
+      header('Content-Type: application/json');
+      echo json_encode($x);exit;
+
+    }
+
+    public static function WebServiceResponse($xml){
+      if (!$xml) {
+        self::renderJSON(array('ERROR'=>'NO SERVER RESPONSE'));
+      }
+
+      if(!is_object($xml)){
+            $xml = Tools::prepareXML($xml);        
+      }
+
+      if ($xml) {
+        if (!Tools::TieneError($xml)) {
+          self::renderJSON($xml);
+        }else{
+          self::renderJSON(array('ERROR'=>$xml->error));
+        }
+      }else{
+        self::renderJSON(array('ERROR'=>'INVALID XML'));
+      }
+
+      
+    }
      
 
     public function renderBasic($message = false){
@@ -56,14 +84,17 @@
 
       // We send the products array, the graph and the anti-CRSF input field to render it and echo the result
       echo $template->render(array('message' => $message, 'focus_head' => true));
+      exit;
     }
 
-    public function renderSearchResults($jsonObj){
+    public function renderSearchResults($json){
+      $jsonObj = json_decode($json);
       if (!$jsonObj->ok) {
         $this->redirectWithMessage('i', ''.$jsonObj->msg.'','/manifiesto_ferroviario/ ');
       }
       $template = self::startTwig('resultados_referencia.html.twig');
       echo $template->render(array('Referencia' => $jsonObj->data));
+      exit;
 
     }
  

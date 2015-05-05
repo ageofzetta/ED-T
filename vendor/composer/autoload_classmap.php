@@ -8,7 +8,8 @@ $baseDir = dirname($vendorDir);
 return array(
     'EDespacho' => $baseDir . '/src/Core/EDespacho.php',
     'Messages' => $baseDir . '/src/Core/Messages.php',
-    'Referencia' => $baseDir . '/src/Core/Process.php',
+    'Referencia' => $baseDir . '/src/Core/oldProcess.php',
     'Response' => $baseDir . '/src/Core/Response.php',
     'Tools' => $baseDir . '/src/Core/Tools.php',
+    'WSSoapClient' => $baseDir . '/src/Core/WSSoapClient.php',
 );
