@@ -1,7 +1,7 @@
 <?php
 
 /**
-   * 
+   * Clase Response contiene varios métodos para genererar 'Respuestas' a una petición.
    */
    class Response
    {
@@ -14,6 +14,13 @@
       $this->csrf_field = $csrf_field;
       
     }
+
+  /**
+  * Example of documenting multiple possible datatypes for a given parameter
+  * @param bool|string $foo sometimes a boolean, sometimes a string (or, could have just used "mixed")
+  * @param bool|int $bar sometimes a boolean, sometimes an int (again, could have just used "mixed")
+  */
+
     public static function startTwig($template){
       genera_menu(0,1,true,true,"UTF-8");
 

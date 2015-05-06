@@ -1,0 +1,112 @@
+
+## FILE IGNORE LIST
+
+#//////////////////#
+### PARTICULARES ###
+#//////////////////#
+
+# bower_components/
+
+#///////////////#
+### GENERALES ###
+#///////////////#
+
+#### ARCHIVOS
+
+**/*.jpg
+**/*.ico
+**/*.png
+**/*.gif
+**/*.jpeg
+
+#### CARPETAS
+
+**/images/
+**/img/
+**/icons/
+**/fonts/
+**/font/
+**/theme/
+**/themes/
+**/imagenes/
+**/logs/
+**/src/
+**/lib/
+**/static/
+
+#### ARCHIVOS
+
+## SASS
+
+**/*.sass-cache
+**/*.sass-cache/*
+
+## MISCELÃƒÆ’Ã‚ÂNEOS ##
+#################
+
+**/*.zip
+**/*.bzip
+**/*.bz2
+**/*.xz
+**/*.lzma
+**/*.cab
+**/*.xpi
+**/*.gem
+**/*.egg
+**/*.deb
+**/*.rpm
+**/*.msi
+**/*.msm
+**/*.msp
+**/error_log
+**/*.7z
+**/*.dmg
+**/*.gz
+**/*.iso
+**/*.jar
+**/*.rar
+**/*.tar
+**/*.zip
+**/*.log
+# **/*.sql
+# **/*.sqlite
+**/*.DS_Store
+**/*.DS_Store?
+**/*._*
+**/*.Spotlight-V100
+**/*.Trashes
+**/ehthumbs.db
+**/Thumbs.db
+**/*.AppleDouble
+**/*.LSOverride
+**/*._*
+**/*.AppleDB
+**/*.AppleDesktop
+**/Network Trash Folder
+**/Temporary Items
+**/*.apdisk
+**/*.codekit-config.json
+**/config.codekit
+
+#############
+## SOURCES ##
+#############
+
+**/*.psd
+**/*.ai
+**/*.fla
+**/*.swf
+**/*.doc
+**/*.xls
+**/*.ppt
+**/*.docx
+**/*.xlsx
+**/*.pptx
+**/*.tiff
+**/*.jpeg
+**/*.fla
+**/*.as
+**/*.jpg
+**/*.gif
+**/*.png
+**/*.pdf

@@ -1,21 +1,45 @@
 <?php
-/* 
-	Misc functions to escape and clean strings
-*/
+/**
+ * Ésta Clase comprende una Serie de funciones para manipular strings.
+ * @author Jahzeel Tapia - https://github.com/ageofzetta/
+ */
 
  class Tools
  {
- 	public static function friendlyPost ($str = '') {
+
+	/**
+	 * Escapa un string
+	 * 
+	 * @param string $str
+	 * @return string 
+	 */
+
+ 	public static function friendlyPost ($str) {
  		$new = htmlspecialchars_decode(htmlentities($str, ENT_NOQUOTES, 'UTF-8'), ENT_NOQUOTES);
  		return $new;
  	}
- 	public static function prepareString($string){
- 		// if(substr($string, -1) == '/') {
- 		// 	$string = substr($string, 0, -1);
+
+	/**
+	 * Decodifica un string previamente escapado.
+	 * 
+	 * @param string $str
+	 * @return string
+	 */
+
+ 	public static function prepareString($str){
+ 		// if(substr($str, -1) == '/') {
+ 		// 	$str = substr($str, 0, -1);
  		// }
- 		return html_entity_decode(trim($string));
+ 		return html_entity_decode(trim($str));
  	}
 
+	/**
+	 * Valida un objeto|string como XML válido
+	 * 
+	 * @param string|object $xml_string
+	 * @return object $xml
+	 */
+ 	
  	public static function prepareXML($xml_string){
 
  		libxml_use_internal_errors(true);
