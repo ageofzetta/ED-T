@@ -15,9 +15,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 			
 			$ED = 	new EDespacho(array('referencia' => $num_ref), false);
 			$basicInfo = $ED->getBasicInfo($num_ref);
-			// $ED->
-			var_dump($ED);
-		    // $answer->renderSearchResults($basicInfo);
+		    $answer->renderSearchResults($basicInfo);
 
 
 		}else{

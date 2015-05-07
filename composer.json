@@ -4,7 +4,9 @@
         "guzzlehttp/guzzle": "~5.0"
     },"autoload": {
         "classmap": [
-        	"src/Core"
+        	"libs/Core",
+        	"libs/ED",
+        	"libs/SOAP"
         ]
     }
 }
